@@ -1,0 +1,64 @@
+.benefits {
+  padding-top: var(--tipical-padding);
+  padding-bottom: var(--tipical-padding);
+}
+
+.benefits__list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.benefits__item {
+  flex-basis: calc((100%-120px) / 4);
+  margin-left: 30px;
+  & + & {
+    margin-left: 30px;
+  }
+  &::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna1.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock1.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram1.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut1.svg);
+}
+
+.benefits__title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--title-color);
+}
+
+.benefits__text {
+  width: 270px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--main-text-color);
+}
