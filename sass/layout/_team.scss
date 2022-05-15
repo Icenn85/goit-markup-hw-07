@@ -66,21 +66,20 @@
   border-radius: 50%;
   transition: fill var(--duration-timing-function),
     background-color var(--duration-timing-function);
-}
 
-.team-soc__link:hover,
-.team-soc__link:focus {
-  background-color: var(--accent-color);
-}
-
-.team-soc__link:hover .team-soc__icon {
-  fill: #ffffff;
-}
-
-.team-soc__link:focus .team-soc__icon {
-  fill: #ffffff;
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .team-soc__icon {
   fill: #afb1b8;
+
+  .team-soc__link:hover & {
+    fill: #ffffff;
+  }
+  .team-soc__link:focus & {
+    fill: #ffffff;
+  }
 }

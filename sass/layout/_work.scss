@@ -25,21 +25,20 @@
   position: relative;
   flex-basis: calc((100%-90px) / 3);
   margin-left: 30px;
-}
 
-.work__item + .work__item {
-  margin-left: 30px;
-}
+  & + & {
+    margin-left: 30px;
+  }
+  &::before {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    content: "";
 
-.work__item::before {
-  position: absolute;
-  bottom: 0;
-  display: block;
-  content: "";
-
-  width: 100%;
-  height: 70px;
-  background: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+  }
 }
 
 .work__text {

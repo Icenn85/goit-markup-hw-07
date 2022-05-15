@@ -48,9 +48,12 @@
   color: #ffffff;
   background-color: var(--accent-color);
   transition: background-color var(--duration-timing-function);
+
+    &:hover,
+    &:focus {
+    background-color: #188ce8;
+  }
 }
 
-.hero__btn:hover,
-.hero__btn:focus {
-  background-color: #188ce8;
-}
+
+

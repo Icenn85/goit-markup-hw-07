@@ -1,19 +1,3 @@
-/* HEADER */
-
-/* HERO */
-
-/* BENEFITS */
-
-/* WORK */
-
-/* TEAM */
-
-/* CLIENTS */
-
-/* FOOTER */
-
-/* MODAL */
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -24,10 +8,9 @@
 
   transition: opacity var(--duration-timing-function),
     visibility var(--duration-timing-function);
-}
-
-.backdrop.is-hidden .modal {
-  transform: scale(0.5);
+  &.is-hidden .modal {
+    transform: scale(0.5);
+  }
 }
 
 .modal {
@@ -64,11 +47,11 @@
   fill: #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
-}
 
-.modal__close-btn:hover,
-.modal__close-btn:focus {
-  fill: var(--accent-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
 .is-hidden {
@@ -103,19 +86,11 @@
   transition: border-color var(--duration-timing-function);
 
   color: var(--main-text-color);
-}
 
-.modal__input:hover,
-.modal__input:focus {
-  border-color: var(--accent-color);
-}
-
-.modal__input:hover + .modal__icon {
-  fill: var(--accent-color);
-}
-
-.modal__input:focus + .modal__icon {
-  fill: var(--accent-color);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
 .modal__input-cover {
@@ -128,6 +103,13 @@
   top: 50%;
   transform: translateY(-50%);
   transition: fill var(--duration-timing-function);
+
+  .modal__input:hover + & {
+    fill: var(--accent-color);
+  }
+  .modal__input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
 .modal__label {
@@ -157,15 +139,14 @@
   outline: none;
   cursor: pointer;
   transition: border-color var(--duration-timing-function);
-}
 
-.modal__text::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.modal__text:hover,
-.modal__text:focus {
-  border-color: var(--accent-color);
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
 .modal__field-check {
@@ -180,6 +161,31 @@
   display: flex;
   align-items: center;
   color: var(--main-text-color);
+
+  & .modal__check-icon {
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    margin-right: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: transparent;
+    transition: border-color var(--duration-timing-function);
+  }
+
+  .modal__check:checked + & .modal__check-icon {
+    background-color: var(--accent-color);
+    border: none;
+    fill: #ffffff;
+  }
+  .modal__check:hover + & .modal__check-icon {
+    border-color: var(--accent-color);
+  }
+  .modal__check:focus + & .modal__check-icon {
+    border-color: var(--accent-color);
+  }
 }
 
 .modal__check-link {
@@ -191,33 +197,6 @@
   margin-left: 5px;
 
   color: var(--accent-color);
-}
-
-.modal__check-text .modal__check-icon {
-  width: 16px;
-  height: 15px;
-  border: 2px solid #212121;
-  border-radius: 2px;
-  margin-right: 9px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: transparent;
-  transition: border-color var(--duration-timing-function);
-}
-
-.modal__check:checked + .modal__check-text .modal__check-icon {
-  background-color: var(--accent-color);
-  border: none;
-  fill: #ffffff;
-}
-
-.modal__check:hover + .modal__check-text .modal__check-icon {
-  border-color: var(--accent-color);
-}
-
-.modal__check:focus + .modal__check-text .modal__check-icon {
-  border-color: var(--accent-color);
 }
 
 .modal__send-btn {
@@ -243,13 +222,9 @@
   border-radius: 4px;
   border: hidden;
   transition: background-color var(--duration-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }
-
-.modal__send-btn:hover,
-.modal__send-btn:focus {
-  background-color: #188ce8;
-}
-
-/* -----------PORTFOLIO------------ */
-
-/* FILTR */

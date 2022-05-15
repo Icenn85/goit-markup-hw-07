@@ -30,15 +30,13 @@
   color: #ffffff;
   background-color: transparent;
   transition: border-color var(--duration-timing-function);
-}
-
-.subscribe-form__input::placeholder {
-  padding-left: 0;
-}
-
-.subscribe-form__input:hover,
-.subscribe-form__input:focus {
-  border-color: #ffffff;
+  &::placeholder {
+    padding-left: 0;
+  }
+  &:hover,
+  &:focus {
+    border-color: #ffffff;
+  }
 }
 
 .subscribe-btn__btn {
@@ -61,11 +59,11 @@
   color: #ffffff;
   background-color: var(--accent-color);
   transition: background-color var(--duration-timing-function);
-}
 
-.subscribe-btn__btn:hover,
-.subscribe-btn__btn:focus {
-  background-color: #188ce8;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }
 
 .subscribe-btn__icon {

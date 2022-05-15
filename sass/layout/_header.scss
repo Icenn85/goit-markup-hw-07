@@ -36,11 +36,11 @@
 
   color: #212121;
   transition: color var(--duration-timing-function);
-}
 
-.sitenav-list__link:hover,
-.sitenav-list__link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .current {
@@ -76,23 +76,22 @@
 
   color: var(--main-text-color);
   transition: color var(--duration-timing-function);
-}
 
-.contact-list__link:hover,
-.contact-list__link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .contact-list__icon {
   margin-right: 10px;
 
   fill: var(--main-text-color);
-}
 
-.contact-list__link:hover .contact-list__icon {
-  fill: var(--accent-color);
-}
-
-.contact-list__link:focus .header-icon {
-  fill: var(--accent-color);
+  .contact-list__link:hover & {
+    fill: var(--accent-color);
+  }
+  .contact-list__link:focus & {
+    fill: var(--accent-color);
+  }
 }
