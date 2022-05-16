@@ -48,6 +48,7 @@ img {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-right: 0;
   color: var(--logo-accent-color);
 }
 
@@ -324,16 +325,13 @@ img {
   align-items: center;
 }
 
-.navigation__logo {
-  margin-right: 93px;
-}
-
 .header__part {
   color: var(--logo-primary-color);
 }
 
 .sitenav-list {
   display: flex;
+  margin-left: 93px;
 }
 
 .sitenav-list__item:not(:last-child) {
